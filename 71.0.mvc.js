@@ -366,9 +366,4 @@ function qrPage(req, res) {
 /// ------------------ gọi SERVER thực thi
 
 
-var server = app.listen( PORT , function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("SERVER http://%s:%s", host, port)
-});
+app.listen(process.env.PORT || 8080)
