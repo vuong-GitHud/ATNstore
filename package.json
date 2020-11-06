@@ -24,5 +24,13 @@
     "qrcode-svg": "^1.1.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuong-GitHud/atnstore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vuong-GitHud/atnstore/issues"
+  },
+  "homepage": "https://github.com/vuong-GitHud/atnstore#readme",
   "description": ""
 }
