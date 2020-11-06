@@ -1,5 +1,5 @@
 web: node app.js
 app.listen(port, funtion()){
-    console.log('Server listen ' + port)
+    console.log('Server listen ' + PORT)
 })
 app.listen(process.env.PORT || 8080)
