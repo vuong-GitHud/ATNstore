@@ -7,7 +7,7 @@ var session = require('express-session');
 var cookieSession = require('cookie-session');
 var cookieParser = require('cookie-parser');
 var router = express.Router();
-const bodyParser= require('body-parser');
+var bodyParser= require('body-parser');
 var multer = require('multer');
 
 var mongodb = require('mongodb');
@@ -26,6 +26,7 @@ var atob = require('atob');
 /// ------------------ CONFIG
 var configHeader = require("./configs/config_Header");
 var configDB = require("./configs/config_DB");
+var PORT = 8080;
 var urldb = configDB.localdb.urldb;
 
 
@@ -344,7 +345,7 @@ function qrPage(req, res) {
 
             console.log("\n\t", inter[key][1]["address"] );
 
-            str = "https://www.facebook.com/Tu.NN79/";
+            str = "/index";
             sv = new QRCode({
                 content: str,
                 padding: 4,
