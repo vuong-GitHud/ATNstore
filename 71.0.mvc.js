@@ -362,7 +362,8 @@ function qrPage(req, res) {
         }
     }
 }
-
+app.get('/report', (req, res) => { res.render('pages/report', {title:'ATN'})
+})
 /// ------------------ gọi SERVER thực thi
 
 
