@@ -345,7 +345,7 @@ function qrPage(req, res) {
 
             console.log("\n\t", inter[key][1]["address"] );
 
-            str = "/index";
+            str = "#";
             sv = new QRCode({
                 content: str,
                 padding: 4,
