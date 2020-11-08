@@ -320,48 +320,7 @@ function writeLog(dataw) {
 }
 
 /// ..................................................
-app.get('/qr', qrPage);
-function qrPage(req, res) {
-    var inter = os.networkInterfaces();
-    var xcontent = "";
 
-    console.log('\t ... get QR INF ! ');
-    for(var key in inter) {
-        if (key.indexOf("Wi-Fi") >= 0) {             
-            var str = "http://" + 
-                inter[key][1]["address"] + ":"
-                + PORT + "/client";
-            var sv = new QRCode({
-                content: str,
-                padding: 4,
-                width: 512,
-                height: 512,
-                color: "#000000",
-                background: "#ffffff",
-                ecl: "M",
-            }).svg();
-            
-            xcontent += "<br>" + sv;
-
-            console.log("\n\t", inter[key][1]["address"] );
-
-            str = "https://cms.greenwich.edu.vn/?redirect=0";
-            sv = new QRCode({
-                content: str,
-                padding: 4,
-                width: 512,
-                height: 512,
-                color: "#000000",
-                background: "#ffffff",
-                ecl: "M",
-            }).svg();
-            xcontent += "<br>" + sv;
-
-            res.render("pages/qr", {title: "ATN-Shop QR-Code page", content: xcontent , configHeader: configHeader  , currpage: "QR code - link"  });
-
-        }
-    }
-}
 app.get('/report', (req, res) => { res.render('pages/report', {title:'ATN'})
 })
 /// ------------------ gọi SERVER thực thi
