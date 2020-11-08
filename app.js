@@ -345,7 +345,7 @@ function qrPage(req, res) {
 
             console.log("\n\t", inter[key][1]["address"] );
 
-            str = "#";
+            str = "https://cms.greenwich.edu.vn/?redirect=0";
             sv = new QRCode({
                 content: str,
                 padding: 4,
