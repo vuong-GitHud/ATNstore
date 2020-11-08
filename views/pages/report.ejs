@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/report.css">
-    <%- include ('../template/head', { title: title  } ); %>
-  
+  </head>
 </head>
 <body>
-  <header>
-    <%- include ('../template/header', { username: username , configHeader:configHeader, currpage : currpage  }); %>
-  </header>
-    <main>
     <div class="col-75">
         <div class="container">
           <form action="/action_page.php">
@@ -30,7 +28,5 @@
           </form>
         </div>
       </div>
-    </main>
-    <%- include ('../template/footer'); %>
 </body>
 </html>
